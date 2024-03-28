@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:soapui-project id="b85d820b-ebdb-4165-bd41-76b241f2b92d" activeEnvironment="Default" name="Local-RecupererFichierService" resourceRoot="" soapui-version="5.7.0" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="c11e29c7-b183-4fe0-ab66-6a1569eb5699" wsaVersion="NONE" name="BasicHttpsBinding_IRecupererFichier" type="wsdl" bindingName="{http://tempuri.org/}BasicHttpsBinding_IRecupererFichier" soapVersion="1_1" anonymous="optional" definition="https://localhost/WcfServiceNet472AuthBasic/RecupererFichierService.svc?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="https://localhost/WcfServiceNet472AuthBasic/RecupererFichierService.svc?wsdl"><con:part><con:url>https://localhost/WcfServiceNet472AuthBasic/RecupererFichierService.svc?wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="RecupererFichierService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
-  <wsp:Policy wsu:Id="BasicHttpsBinding_IRecupererFichier_policy">
+<con:soapui-project id="d8645117-c295-4d7e-a474-c59f097dfa7b" activeEnvironment="Default" name="RecupererFichierService" resourceRoot="" soapui-version="5.7.0" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="31b7b711-ae1d-4ae0-96b5-4ca664380fc0" wsaVersion="200508" name="EndpointWcfServiceNet472AuthBasic" type="wsdl" bindingName="{http://tempuri.org/}EndpointWcfServiceNet472AuthBasic" soapVersion="1_2" anonymous="optional" definition="https://localhost/WcfServiceNet472AuthBasic/RecupererFichierService.svc?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="https://localhost/WcfServiceNet472AuthBasic/RecupererFichierService.svc?wsdl"><con:part><con:url>https://localhost/WcfServiceNet472AuthBasic/RecupererFichierService.svc?wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="RecupererFichierService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+  <wsp:Policy wsu:Id="EndpointWcfServiceNet472AuthBasic_policy">
     <wsp:ExactlyOne>
       <wsp:All>
         <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
@@ -20,8 +20,29 @@
                 <sp:Strict/>
               </wsp:Policy>
             </sp:Layout>
+            <sp:IncludeTimestamp/>
           </wsp:Policy>
         </sp:TransportBinding>
+        <sp:SignedSupportingTokens xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:UsernameToken sp:IncludeToken="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/AlwaysToRecipient">
+              <wsp:Policy>
+                <sp:WssUsernameToken10/>
+              </wsp:Policy>
+            </sp:UsernameToken>
+          </wsp:Policy>
+        </sp:SignedSupportingTokens>
+        <sp:Wss11 xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy/>
+        </sp:Wss11>
+        <sp:Trust10 xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:MustSupportIssuedTokens/>
+            <sp:RequireClientEntropy/>
+            <sp:RequireServerEntropy/>
+          </wsp:Policy>
+        </sp:Trust10>
+        <wsaw:UsingAddressing/>
       </wsp:All>
     </wsp:ExactlyOne>
   </wsp:Policy>
@@ -44,22 +65,25 @@
       <wsdl:output wsaw:Action="http://tempuri.org/IRecupererFichier/TelechargerFichierResponse" message="tns:IRecupererFichier_TelechargerFichier_OutputMessage"/>
     </wsdl:operation>
   </wsdl:portType>
-  <wsdl:binding name="BasicHttpsBinding_IRecupererFichier" type="tns:IRecupererFichier">
-    <wsp:PolicyReference URI="#BasicHttpsBinding_IRecupererFichier_policy"/>
-    <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+  <wsdl:binding name="EndpointWcfServiceNet472AuthBasic" type="tns:IRecupererFichier">
+    <wsp:PolicyReference URI="#EndpointWcfServiceNet472AuthBasic_policy"/>
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http"/>
     <wsdl:operation name="TelechargerFichier">
-      <soap:operation soapAction="http://tempuri.org/IRecupererFichier/TelechargerFichier" style="document"/>
+      <soap12:operation soapAction="http://tempuri.org/IRecupererFichier/TelechargerFichier" style="document"/>
       <wsdl:input>
-        <soap:body use="literal"/>
+        <soap12:body use="literal"/>
       </wsdl:input>
       <wsdl:output>
-        <soap:body use="literal"/>
+        <soap12:body use="literal"/>
       </wsdl:output>
     </wsdl:operation>
   </wsdl:binding>
   <wsdl:service name="RecupererFichierService">
-    <wsdl:port name="BasicHttpsBinding_IRecupererFichier" binding="tns:BasicHttpsBinding_IRecupererFichier">
-      <soap:address location="https://localhost/WcfServiceNet472AuthBasic/RecupererFichierService.svc"/>
+    <wsdl:port name="EndpointWcfServiceNet472AuthBasic" binding="tns:EndpointWcfServiceNet472AuthBasic">
+      <soap12:address location="https://localhost/WcfServiceNet472AuthBasic/RecupererFichierService.svc/endpointWcfServiceNet472AuthBasic"/>
+      <wsa10:EndpointReference>
+        <wsa10:Address>https://localhost/WcfServiceNet472AuthBasic/RecupererFichierService.svc/endpointWcfServiceNet472AuthBasic</wsa10:Address>
+      </wsa10:EndpointReference>
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>https://localhost/WcfServiceNet472AuthBasic/RecupererFichierService.svc?xsd=xsd0</con:url><con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://tempuri.org/">
@@ -165,23 +189,23 @@
   <xs:attribute name="FactoryType" type="xs:QName"/>
   <xs:attribute name="Id" type="xs:ID"/>
   <xs:attribute name="Ref" type="xs:IDREF"/>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>https://localhost/WcfServiceNet472AuthBasic/RecupererFichierService.svc</con:endpoint></con:endpoints><con:operation id="4cc04324-8f1e-453e-bf46-595f533e5960" isOneWay="false" action="http://tempuri.org/IRecupererFichier/TelechargerFichier" name="TelechargerFichier" bindingOperationName="TelechargerFichier" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="8c09c2fd-78b3-46e1-8c8b-978eca0712c4" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://localhost/WcfServiceNet472AuthBasic/RecupererFichierService.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:wcf="http://schemas.datacontract.org/2004/07/WcfServiceNet472AuthBasic.RecupererFichier">
-   <soapenv:Header/>
-   <soapenv:Body>
-      <tem:TelechargerFichier>
-         <!--Optional:-->
-         <tem:intrant>
-            <!--Optional:-->
-            <wcf:CodCategorie>?</wcf:CodCategorie>
-            <!--Optional:-->
-            <wcf:CodEtape>?</wcf:CodEtape>
-            <!--Optional:-->
-            <wcf:IdPartenaire>6f34501e-e54e-4a24-b43e-1b533e88a01b</wcf:IdPartenaire>
-            <!--Optional:-->
-            <wcf:NoRSI>6f34501e-e54e-4a24-b43e-1b533e88a01b</wcf:NoRSI>
-            <!--Optional:-->
-            <wcf:NomFichier>?</wcf:NomFichier>
-         </tem:intrant>
-      </tem:TelechargerFichier>
-   </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:credentials><con:username>aaab</con:username><con:password>bbb</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:preemptive>true</con:preemptive><con:authType>Preemptive</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IRecupererFichier/TelechargerFichier"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>https://localhost/WcfServiceNet472AuthBasic/RecupererFichierService.svc/endpointWcfServiceNet472AuthBasic</con:endpoint></con:endpoints><con:operation id="1b69f1cc-5136-4bc6-afb7-c9ef96e78ef1" isOneWay="false" action="http://tempuri.org/IRecupererFichier/TelechargerFichier" name="TelechargerFichier" bindingOperationName="TelechargerFichier" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="10a05606-bdd2-48ba-9e20-0104f0fec77b" name="Request 1" useWsAddressing="true" wssPasswordType="PasswordText" useWsReliableMessaging="true"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://localhost/WcfServiceNet472AuthBasic/RecupererFichierService.svc/endpointWcfServiceNet472AuthBasic</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:tem="http://tempuri.org/" xmlns:wcf="http://schemas.datacontract.org/2004/07/WcfServiceNet472AuthBasic.RecupererFichier">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <tem:TelechargerFichier>\r
+         <!--Optional:-->\r
+         <tem:intrant>\r
+            <!--Optional:-->\r
+            <wcf:CodCategorie>?</wcf:CodCategorie>\r
+            <!--Optional:-->\r
+            <wcf:CodEtape>?</wcf:CodEtape>\r
+            <!--Optional:-->\r
+            <wcf:IdPartenaire>d15d3a52-9a7e-4bf0-bb26-2d8e7e15a879</wcf:IdPartenaire>\r
+            <!--Optional:-->\r
+            <wcf:NoRSI>d15d3a52-9a7e-4bf0-bb26-2d8e7e15a879</wcf:NoRSI>\r
+            <!--Optional:-->\r
+            <wcf:NomFichier>?</wcf:NomFichier>\r
+         </tem:intrant>\r
+      </tem:TelechargerFichier>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:credentials><con:username>util01</con:username><con:password>mdp01</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="TRUE" version="200508" action="http://tempuri.org/IRecupererFichier/TelechargerFichier" to="https://localhost/WcfServiceNet472AuthBasic/RecupererFichierService.svc/endpointWcfServiceNet472AuthBasic" generateMessageId="true"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>

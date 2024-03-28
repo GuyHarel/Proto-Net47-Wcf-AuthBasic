@@ -1,1 +1,1 @@
-# WcfServiceNet472AuthBasic
+# VS 2022

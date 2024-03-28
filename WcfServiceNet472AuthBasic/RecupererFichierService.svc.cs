@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
+using System.ServiceModel.Web;
 using System.Text;
 using WcfServiceNet472AuthBasic.RecupererFichier;
 
@@ -17,6 +18,9 @@ namespace WcfServiceNet472AuthBasic
         public TelechargerFichierExtrant TelechargerFichier(TelechargerFichierIntrant intrant)
         {
             var extrant = new TelechargerFichierExtrant { Categorie = "Une categorie" };
+
+            var webOperationContext = WebOperationContext.Current;
+            var securityContext = ServiceSecurityContext.Current;
 
             return extrant; 
         }

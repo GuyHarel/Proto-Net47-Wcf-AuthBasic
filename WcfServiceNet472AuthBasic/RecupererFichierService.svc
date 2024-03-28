@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="WcfServiceNet472AuthBasic.RecupererFichierService" CodeBehind="RecupererFichierService.svc.cs" %>

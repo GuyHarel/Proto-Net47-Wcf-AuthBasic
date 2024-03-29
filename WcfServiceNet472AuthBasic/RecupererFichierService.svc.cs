@@ -22,6 +22,23 @@ namespace WcfServiceNet472AuthBasic
             var webOperationContext = WebOperationContext.Current;
             var securityContext = ServiceSecurityContext.Current;
 
+            try
+            {
+                var chemin = AppDomain.CurrentDomain.BaseDirectory;
+                chemin += "bin\\Fichiers\\Test-Fichier.docx";
+
+                byte[] bytes = System.IO.File.ReadAllBytes(chemin);
+
+                extrant.Fichier = bytes;
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
+
+
+
             return extrant; 
         }
     }
